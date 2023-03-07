@@ -1,0 +1,18 @@
+:root {
+  --primary-Bright-Blue: hsl(220, 98%, 61%);
+  --primary-Check-Background: linear-gradient (hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  --light-Very-Ligh-Gray: hsl(0, 0%, 98%);
+  --light-Very-Ligh-Grayish-Blue: hsl(236, 33%, 92%);
+  --light-Light-Grayis-Blue: hsl(233, 11%, 84%);
+  --light-Dark-Grayis-Blue: hsl(236, 9%, 61%);
+  --light-Very-Dar-Grayish-Blue: hsl(235, 19%, 35%);
+
+  --dark-Very-Dark-Blue: hsl(235, 21%, 11%);
+  --dark-Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --dark-Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --dark-Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --dark-Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --dark-Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --dark-Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}

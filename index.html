@@ -4,33 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Todo app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/root.css">
+  <link rel="stylesheet" href="/styles/style.css">
+
+  <title>Frontend Mentor | Todo app</title>
 </head>
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--dark-Very-Dark-Blue)]">
+    <div class="m-0 top-auto">
+      <h1 class="flex flex-row justify-between text-left bg-blue-500">TODO<a href="">O</a></h1>
+      <div class="flex flex-row">
+        <input type="checkbox" name="create" id="checkbox">
+        <input type="text" placeholder="Create a new todo..." class="w-full h-full" id="create">
+      </div>
+      <div class="flex flex-col bg-green-600">
+        <p><input type="checkbox">Create a ... alguma coisa</p>
+        <p><input type="checkbox">Create a ... alguma coisa</p>
+        <p><input type="checkbox">Create a ... alguma coisa</p>
+        <p><input type="checkbox">Create a ... alguma coisa</p>
+        <div class="flex flex-row items-center justify-center relative">        
+          <p class="absolute left-0">1 items left</p>
+          <p>All</p>
+          <p>Active </p>
+          <p>Completed</p>
+          <p class="absolute right-0">Clear Completed</p>
+        </div>      
+      </div>    
+      <p class="text-center">Drag and drop to reorder list</p>    
+      <div class="text-[11px] text-center">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[#3e52a3]">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/devggui/todo-app">Guilherme Silva. (devggui) Here</a>.
+      </div>
+    </div>
   </div>
 </body>
 </html>
