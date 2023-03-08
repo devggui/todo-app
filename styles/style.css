@@ -4,3 +4,16 @@
   text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
 }
+
+p {
+  color: var(--dark-Light-Grayish-Blue);
+}
+
+span {
+  color: var(--dark-Very-Dark-Grayish-Blue);
+  font-size: 14px;
+}
+
+span:hover {
+  color: var(--dark-Light-Grayish-Blue-hover);  
+}

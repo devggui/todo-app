@@ -1,6 +1,8 @@
 :root {
   --primary-Bright-Blue: hsl(220, 98%, 61%);
-  --primary-Check-Background: linear-gradient (hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --primary-Check-Background: linear-gradient (to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --primary-from: hsl(192, 100%, 67%);
+  --primary-to: hsl(280, 87%, 65%);
 
   --light-Very-Ligh-Gray: hsl(0, 0%, 98%);
   --light-Very-Ligh-Grayish-Blue: hsl(236, 33%, 92%);
@@ -14,5 +16,5 @@
   --dark-Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
   --dark-Dark-Grayish-Blue: hsl(234, 11%, 52%);
   --dark-Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-  --dark-Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  --dark-Very-Dark-Grayish-Blue-hover: hsl(237, 14%, 26%);
 }
