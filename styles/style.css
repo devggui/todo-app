@@ -15,19 +15,21 @@ span {
 }
 
 span:hover {
-  color: var(--dark-Light-Grayish-Blue-hover);  
+  color: var(--dark-Light-Grayish-Blue-hover);
+  font-weight: bold;  
+  cursor: pointer;
 }
 
 #checkbox-icon1:hover {  
   border-radius: 50%;
   border: 1px solid transparent;
   background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;  
-  -webkit-mask: /*4*/
+  -webkit-mask: 
      linear-gradient(#fff 0 0) padding-box,
      linear-gradient(#fff 0 0);
   mask: 
     linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; /*5'*/
-          mask-composite: exclude; /*5*/
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
 }
