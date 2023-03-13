@@ -29,19 +29,22 @@
         <input type="text" placeholder="Create a new todo..." class=" text-black px-2">        
       </div>
 
-      <div class="flex flex-col h-auto bg-[var(--dark-Very-Dark-Desaturated-Blue)] rounded-t-[4px] rounded-b-[4px]">
+      <div class="flex flex-col h-auto bg-[var(--light-Very-Light-Gray)] rounded-t-[4px] rounded-b-[4px]">
         <div id="taskComponent">
-          <div class="flex flex-row items-center mb-6 p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer">
+          <div class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]">
             <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">
               <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">
             </div>
-            <label for="checkbox" class="px-2 text-[var(--light-Dark-Grayis-Blue)]">Teste</label>
+            <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)]">Teste</label>
             <img src="./images/icon-cross.svg" alt="Icone de correto" class="absolute right-4">
-          </div>     
-        </div>     
-        
-        <!-- mobile -->
-        <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
+          </div>
+        </div>
+        <div class="flex flex-row items-center justify-between pb-4 pt-4">        
+          <span class="ml-4 mr-6 text-[var(--light-Dark-Grayis-Blue)] hover:text-[var(--light-Very-Dark-Grayish-Blue)]">1 items left</span>          
+          <span class="mr-4 ml-6 text-[var(--light-Dark-Grayis-Blue)] hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Clear Completed</span>
+        </div>      
+                     
+        <!-- <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
           <span class="ml-4 mr-6 hover:text-[var(--dark-Light-Grayish-Blue)]">1 items left</span>
           <div>
             <span>All</span>
@@ -49,19 +52,20 @@
             <span>Completed</span>
           </div>
           <span class="mr-4 ml-6 hover:text-[var(--dark-Light-Grayish-Blue)]">Clear Completed</span>
-        </div>  
+        </div>   -->
 
-        <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
-          <span class="ml-4 mr-6 hover:text-[var(--dark-Light-Grayish-Blue)]">1 items left</span>
-          <div>
-            <span>All</span>
-            <span>Active</span>
-            <span>Completed</span>
-          </div>
-          <span class="mr-4 ml-6 hover:text-[var(--dark-Light-Grayish-Blue)]">Clear Completed</span>
-        </div>  
+      </div> 
 
-      </div>    
+      <!-- mobile -->      
+      <div class="footer-mobile mt-6 rounded-[4px]">             
+        <div class="flex flex-row items-center justify-center text-center p-3 bg-[var(--light-Very-Light-Gray)]">
+          <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">All</span>
+          <span class="px-4 text-[var(--light-Dark-Grayis-Blue)]  font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Active</span>
+          <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Completed</span>
+        </div>
+      </div>   
+      <!-- end mobile -->
+
       <p class="text-center text-[var(--dark-Very-Dark-Grayish-Blue)] mt-10 mb-6">Drag and drop to reorder list</p>    
       <div class="text-[11px] text-center text-[var(--dark-Very-Dark-Grayish-Blue)]">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[#3e52a3]">Frontend Mentor</a>. 
