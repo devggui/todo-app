@@ -18,31 +18,46 @@
 
   <title>Frontend Mentor | Todo app</title>
 </head>
-<body>  
-  <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--dark-Very-Dark-Blue)] bg-[url('./images/bg-desktop-dark.jpg')] bg-no-repeat bg-contain">    
-    <div class="m-0 top-24 absolute w-2/5 min-w-[400px]">
+<body>
+  <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--light-Very-Light-Grayish-Blue)] bg-[url('./images/bg-mobile-light.jpg')] bg-no-repeat bg-contain">    
+    <div class="px-8 top-11 absolute">
       <div class="mb-8">
-        <h1 class="flex flex-row justify-between text-left text-4xl text-white font-bold">T O D O<a id="mode"><img src="images/icon-sun.svg" alt="Icone em formato de um sol na cor branca"></a></h1>
+        <h1 class="flex flex-row justify-between text-left text-3xl text-white font-bold">T O D O<a id="mode"><img src="images/icon-moon.svg" alt="Icone em formato de um sol na cor branca"></a></h1>
       </div>
-      <div class="flex flex-row items-center p-1 mb-6 bg-[var(--dark-Very-Dark-Desaturated-Blue)] rounded-[4px]">
-        <div class="m-4 w-7 h-7 rounded-full border-[1px] border-[var(--dark-Very-Dark-Grayish-Blue)] cursor-pointer"></div>
-        <input type="text" placeholder="Create a new todo..." class="w-full bg-transparent text-[var(--dark-Light-Grayish-Blue)]" id="create">
+      <div class="flex flex-row items-center mb-6 p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer">
+        <label class="w-7 h-7 rounded-full border-[1px] border-[var(--light-Very-Light-Grayish-Blue)]"></label>
+        <input type="text" placeholder="Create a new todo..." class=" text-black px-2">        
       </div>
 
       <div class="flex flex-col h-auto bg-[var(--dark-Very-Dark-Desaturated-Blue)] rounded-t-[4px] rounded-b-[4px]">
-        <div id="component" class="max-w-2xl">
-          <div class="flex flex-row items-center p-1 border-b-[1px] border-[var(--dark-Very-Dark-Grayish-Blue)] cursor-pointer">
-            <div id="checkbox-icon1" class="m-4 w-7 h-7 rounded-full border-[1px] border-[var(--dark-Very-Dark-Grayish-Blue)] cursor-pointer"></div>
-            <p>Create a ... alguma coisa</p>
-            <img src="./images/icon-cross.svg" alt="Icone de correto" class="absolute right-0 mr-4 cursor-pointer">
+        <div id="taskComponent">
+          <div class="flex flex-row items-center mb-6 p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer">
+            <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">
+              <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">
+            </div>
+            <label for="checkbox" class="px-2 text-[var(--light-Dark-Grayis-Blue)]">Teste</label>
+            <img src="./images/icon-cross.svg" alt="Icone de correto" class="absolute right-4">
           </div>     
         </div>     
-                       
-        <div class="flex flex-row items-center justify-between pb-4 pt-4">        
+        
+        <!-- mobile -->
+        <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
           <span class="ml-4 mr-6 hover:text-[var(--dark-Light-Grayish-Blue)]">1 items left</span>
-          <span>All</span>
-          <span>Active</span>
-          <span>Completed</span>
+          <div>
+            <span>All</span>
+            <span>Active</span>
+            <span>Completed</span>
+          </div>
+          <span class="mr-4 ml-6 hover:text-[var(--dark-Light-Grayish-Blue)]">Clear Completed</span>
+        </div>  
+
+        <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
+          <span class="ml-4 mr-6 hover:text-[var(--dark-Light-Grayish-Blue)]">1 items left</span>
+          <div>
+            <span>All</span>
+            <span>Active</span>
+            <span>Completed</span>
+          </div>
           <span class="mr-4 ml-6 hover:text-[var(--dark-Light-Grayish-Blue)]">Clear Completed</span>
         </div>  
 
