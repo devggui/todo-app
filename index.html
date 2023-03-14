@@ -20,24 +20,24 @@
 </head>
 <body>
   <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--light-Very-Light-Grayish-Blue)] bg-[url('./images/bg-mobile-light.jpg')] bg-no-repeat bg-contain md:bg-[url('./images/bg-desktop-light.jpg')]">    
-    <div class="px-8 absolute top-11 md:top-24 md:w-2/5">
+    <form class="px-8 absolute top-11 md:top-24 md:w-2/5">
       <div class="mb-8">
         <h1 class="flex flex-row justify-between text-left text-3xl text-white font-bold md:text-5xl">T O D O<a id="mode"><img src="images/icon-moon.svg" alt="Icone em formato de um sol na cor branca"></a></h1>
       </div>
       <div class="flex flex-row items-center mb-6 p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer">
-        <label class="w-7 h-7 rounded-full border-[1px] border-[var(--light-Very-Light-Grayish-Blue)]"></label>
-        <input type="text" placeholder="Create a new todo..." class=" text-black px-2 md:py-2">        
+        <button type="submit" class="w-7 h-7 rounded-full border-[1px] border-[var(--light-Very-Light-Grayish-Blue)]"></button>
+        <input type="text" placeholder="Create a new todo..." class=" text-black px-2 md:py-2" id="newTask">        
       </div>
 
       <div class="flex flex-col h-auto bg-[var(--light-Very-Light-Gray)] rounded-t-[4px] rounded-b-[4px]">
         <div id="taskComponent">
-          <div class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]">
+          <!-- <div class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]">
             <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">
               <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">
             </div>
             <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)] md:py-2">Teste</label>
-            <img src="./images/icon-cross.svg" alt="Icone de correto" class="absolute right-4">
-          </div>
+            <img src="./images/icon-cross.svg" alt="Icone em formato de X" class="absolute right-4">
+          </div> -->
         </div>
         <div class="flex flex-row items-center justify-between py-4">        
           <span class="ml-4 text-[var(--light-Dark-Grayis-Blue)]">1 items left</span>          
@@ -66,7 +66,9 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[#3e52a3]">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/devggui/todo-app">Guilherme Silva. (devggui)</a>.
       </div>
-    </div>
+    </form>
   </div>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>
