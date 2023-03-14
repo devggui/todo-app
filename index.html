@@ -19,14 +19,14 @@
   <title>Frontend Mentor | Todo app</title>
 </head>
 <body>
-  <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--light-Very-Light-Grayish-Blue)] bg-[url('./images/bg-mobile-light.jpg')] bg-no-repeat bg-contain">    
-    <div class="px-8 top-11 absolute">
+  <div class="w-screen h-screen flex flex-col items-center justify-center text-left bg-[var(--light-Very-Light-Grayish-Blue)] bg-[url('./images/bg-mobile-light.jpg')] bg-no-repeat bg-contain md:bg-[url('./images/bg-desktop-light.jpg')]">    
+    <div class="px-8 absolute top-11 md:top-24 md:w-2/5">
       <div class="mb-8">
-        <h1 class="flex flex-row justify-between text-left text-3xl text-white font-bold">T O D O<a id="mode"><img src="images/icon-moon.svg" alt="Icone em formato de um sol na cor branca"></a></h1>
+        <h1 class="flex flex-row justify-between text-left text-3xl text-white font-bold md:text-5xl">T O D O<a id="mode"><img src="images/icon-moon.svg" alt="Icone em formato de um sol na cor branca"></a></h1>
       </div>
       <div class="flex flex-row items-center mb-6 p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer">
         <label class="w-7 h-7 rounded-full border-[1px] border-[var(--light-Very-Light-Grayish-Blue)]"></label>
-        <input type="text" placeholder="Create a new todo..." class=" text-black px-2">        
+        <input type="text" placeholder="Create a new todo..." class=" text-black px-2 md:py-2">        
       </div>
 
       <div class="flex flex-col h-auto bg-[var(--light-Very-Light-Gray)] rounded-t-[4px] rounded-b-[4px]">
@@ -35,36 +35,31 @@
             <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">
               <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">
             </div>
-            <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)]">Teste</label>
+            <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)] md:py-2">Teste</label>
             <img src="./images/icon-cross.svg" alt="Icone de correto" class="absolute right-4">
           </div>
         </div>
-        <div class="flex flex-row items-center justify-between pb-4 pt-4">        
-          <span class="ml-4 mr-6 text-[var(--light-Dark-Grayis-Blue)] hover:text-[var(--light-Very-Dark-Grayish-Blue)]">1 items left</span>          
-          <span class="mr-4 ml-6 text-[var(--light-Dark-Grayis-Blue)] hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Clear Completed</span>
-        </div>      
-                     
-        <!-- <div class="md:flex flex-row items-center justify-between pb-4 pt-4">        
-          <span class="ml-4 mr-6 hover:text-[var(--dark-Light-Grayish-Blue)]">1 items left</span>
-          <div>
-            <span>All</span>
-            <span>Active</span>
-            <span>Completed</span>
+        <div class="flex flex-row items-center justify-between py-4">        
+          <span class="ml-4 text-[var(--light-Dark-Grayis-Blue)]">1 items left</span>          
+          <!-- desktop layout -->
+          <div class="hidden md:block">            
+            <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">All</span>
+            <span class="px-4 text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Active</span>
+            <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Completed</span>
           </div>
-          <span class="mr-4 ml-6 hover:text-[var(--dark-Light-Grayish-Blue)]">Clear Completed</span>
-        </div>   -->
-
+          <!-- end desktop layout  -->
+          <span class="mr-4 text-[var(--light-Dark-Grayis-Blue)] hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Clear Completed</span>
+        </div>                
       </div> 
-
-      <!-- mobile -->      
-      <div class="footer-mobile mt-6 rounded-[4px]">             
-        <div class="flex flex-row items-center justify-center text-center p-3 bg-[var(--light-Very-Light-Gray)]">
+      <!-- mobile layout -->      
+      <div class="footer-mobile mt-6 block md:hidden">             
+        <div class="flex flex-row items-center justify-center text-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px]">
           <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">All</span>
           <span class="px-4 text-[var(--light-Dark-Grayis-Blue)]  font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Active</span>
           <span class="text-[var(--light-Dark-Grayis-Blue)] font-bold hover:text-[var(--light-Very-Dark-Grayish-Blue)]">Completed</span>
         </div>
       </div>   
-      <!-- end mobile -->
+      <!-- end mobile layout -->
 
       <p class="text-center text-[var(--dark-Very-Dark-Grayish-Blue)] mt-10 mb-6">Drag and drop to reorder list</p>    
       <div class="text-[11px] text-center text-[var(--dark-Very-Dark-Grayish-Blue)]">

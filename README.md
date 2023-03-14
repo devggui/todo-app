@@ -97,3 +97,12 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+improvements:
+
+[] Modo noturno
+[] Botões
+[] Ajustar responsividade de texto digitado
+[] Ajustar tamanho do input sem alterar o tamanho do icone
+[] Ajustar tamanho da tela de acordo com o conteudo digitado
+[] Ajustar responsividade geral
