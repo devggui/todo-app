@@ -31,12 +31,8 @@ function upgradeTasks() {
     console.log(task.name);
     
     
-    const container = document.createElement('div');
-    container.className = 'class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]';
-
-    const containerInput = document.createElement('div');
-    containerInput.className = 'class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]';
-
+    list.innerHTML += '<div class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]">';
+    list.innerHTML += '  <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">';
     list.innerHTML += '    <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">';
     list.innerHTML += '  </div>';
     list.innerHTML += '  <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)] md:py-2">'+task.name+'</label>';
