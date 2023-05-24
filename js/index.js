@@ -1,56 +1,60 @@
 const form = document.querySelector('form');
 const input = document.querySelector('#newTask');
-const list = document.querySelector('#taskComponent');
+const root = document.querySelector('#root');
 
 let tasks = [];
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  addTask();
-});
+const newTask = document.getElementById('newTask')
 
-function addTask() {
-  const taskName = input.value.trim();
-  
-  if (taskName === '') return;
+newTask.addEventListener('keypress', (event) => {
+  if(event.key === 'Enter') {
+    if(newTask.value == '') return;  
+    
+    tasks.push(newTask.value)
+    newTask.value = ''
 
-  tasks.push({
-    name: taskName,
-    completed: false
-  });
+    addTask(tasks)
+  }
+})
+
+function addTask(tasks) {  
+  let html = '';
+
+  tasks.map((task, index) => {                 
+    html += `
+      <div class="relative flex p-5 bg-white items-center justify-center border-b border-solid border-[var(--light-Light-Grayis-Blue)]" id="task${index}">
+        <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full sm:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)] relative">
+          <input class="bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)] appearance-none outline-none align-middle w-7 h-7 rounded-full cursor-pointer" type="checkbox" id="checkbox${index}" onclick="taskCompleted(${index})">
+          <img class="block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-3 h-3 pointer-events-none" src="./images/icon-check.svg" alt="">
+        </div>
+        <label class="w-full px-5 align-middle cursor-pointer text-[var(--dark-Very-Dark-Desaturated-Blue)]" for="checkbox${index}" id="label${index}">${tasks[index]}</label>      
+        <img class="absolute top-1/2 right-6 transform -translate-y-1/2 cursor-pointer" onclick="removeTask(${index})" src="./images/icon-cross.svg" alt="Icone em formato de X">      
+      </div> 
+    `   
+  }); 
   
-  upgradeTasks();
-  input.value = '';  
+  root.innerHTML = html;
 }
 
-
-function upgradeTasks() {  
-  list.innerHTML = '';
-
-  tasks.forEach((task, index) => {
-    console.log(task.name);
-    
-    
-    list.innerHTML += '<div class="flex flex-row items-center p-3 bg-[var(--light-Very-Light-Gray)] rounded-[4px] relative cursor-pointer border-b-[1px]">';
-    list.innerHTML += '  <div class="p-[1px] bg-[var(--light-Very-Light-Grayish-Blue)] rounded-full md:hover:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]">';
-    list.innerHTML += '    <input type="checkbox" class="w-7 h-7 rounded-full align-middle appearance-none outline-none cursor-pointer bg-[var(--light-Very-Light-Gray)] checked:bg-gradient-to-r from-[var(--primary-from)] to-[var(--primary-to)]" id="checkbox">';
-    list.innerHTML += '  </div>';
-    list.innerHTML += '  <label for="checkbox" class="px-2 text-[var(--light-Very-Dark-Grayish-Blue)] md:py-2">'+task.name+'</label>';
-    list.innerHTML += '  <img src="./images/icon-cross.svg" alt="Icone em formato de X" class="absolute right-4" id="delete">';
-    list.innerHTML += '</div>';
-
-    
-    list.appendChild(html);
-
-  });
-  // const checked = document.querySelector('#checkbox');    
-  // if (tarefa.concluida) checked.classList.add('line-through');
-  // checked.addEventListener('checked', () => {
-  //   concluirTarefa(index);
-  // });
+function removeTask(element) {
+  const task = document.getElementById(`task${element}`)  
+  task.remove()
 }
 
-function concluirTarefa(index) {
-  tasks[index].concluida = true;
-  // upgradeTasks();
+function taskCompleted(element) {
+  const label = document.getElementById(`label${element}`)
+
+  if(label.classList.contains('line-through')) {
+    label.classList.remove('line-through')
+  } else {
+    label.classList.add('line-through')
+  }
+}
+
+function toggleChecked(element) {  
+  if(element.classList.contains('text-[var(--primary-Bright-Blue)]')) {
+    element.classList.remove('text-[var(--primary-Bright-Blue)]')
+  } else {
+    element.classList.add('text-[var(--primary-Bright-Blue)]')
+  }
 }
